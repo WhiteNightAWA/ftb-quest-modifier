@@ -9,7 +9,6 @@
     background-color: #242424;
     border: 1px lightgrey solid;
     box-shadow:  0 0 0.5em 0.25em rgba(255, 255, 255, 0.2);
-    // transform: translate(-50%, -50%);
 }
 
 div.customHandle {

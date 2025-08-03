@@ -9,8 +9,6 @@ function CustomConnectionLine({ fromX, fromY, toX, toY, connectionLineStyle }) {
         targetY: toY,
     });
 
-    console.log(connectionLineStyle);
-
     return (
         <g>
             <path style={connectionLineStyle} fill="none" d={edgePath} />

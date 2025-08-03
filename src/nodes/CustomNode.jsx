@@ -7,12 +7,12 @@ export default function CustomNode({ id, data }) {
     const isTarget = connection.inProgress && connection.fromNode.id !== id;
 
     return (
-        <div className="customNode">
+        <div className="customNode ">
             <div
                 className="customNodeBody"
                 style={{
-                    width: `${data.size*5}em`,
-                    height: `${data.size*5}em`,
+                    width: `${data.size*100}px`,
+                    height: `${data.size*100}px`,
                 }}
             >
                 {/* If handles are conditionally rendered and not present initially, you need to update the node internals https://reactflow.dev/docs/api/hooks/use-update-node-internals/ */}
@@ -28,6 +28,7 @@ export default function CustomNode({ id, data }) {
                 {(!connection.inProgress || isTarget) && (
                     <Handle className="customHandle" position={Position.Left} type="target" isConnectableStart={false} />
                 )}
+                <span className="drag-handle__custom" />
                 {data.label}
             </div>
         </div>
